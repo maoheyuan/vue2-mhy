@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from '../App'
 import Home from "../page/home/home"
-
+import City from "../page/city/city"
 Vue.use(Router)
 
 export default new Router({
@@ -19,7 +19,12 @@ export default new Router({
         {
           path:"/home",
           component:Home
-        }
+        },
+         //当前选择城市页
+        {
+            path: '/city/:cityid',
+            component: City
+        },
       ]
     }
   ]
