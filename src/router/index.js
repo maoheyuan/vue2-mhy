@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import App from '../App'
 import Home from "../page/home/home"
 
 Vue.use(Router)
@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: App, //顶层路由，对应index.html
       children:[
         {
           path:"",

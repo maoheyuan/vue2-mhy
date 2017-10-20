@@ -1,8 +1,8 @@
 <template>
   <div>
-    <head-top signin-up='home'>
-      <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
-    </head-top>
+    <headTop signin-up='home'>
+      <span slot='logo' class="head_logo"  @click="reload">mhyTest</span>
+    </headTop>
     <nav class="city_nav">
       <div class="city_tip">
         <span>当前定位城市：</span>
