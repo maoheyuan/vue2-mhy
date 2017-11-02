@@ -6,7 +6,7 @@
        v-for="item in shopListArr" tag="li" :key="item.id" class="shop_li">
 
         <section>
-          <img :src="imgBaseUrl+item.image_path" class="shop_img">
+          <img :src="item.image_path" class="shop_img">
         </section>
         <hgroup class="shop_right">
           <header class="shop_detail_header">
@@ -119,7 +119,7 @@
     },
     methods:{
        async initData(){
-         let res=await showList(this.latitude,this.longitude,this.offset,this.restaurantCategoryId);
+         let res=await shopList(this.latitude,this.longitude,this.offset,this.restaurantCategoryId);
          this.shopListArr=[...res];
          if(res.length<=20){
            this.touchend=true

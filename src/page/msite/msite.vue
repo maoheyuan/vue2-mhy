@@ -49,8 +49,6 @@
   import {msiteAdress, msiteFoodTypes, cityGuess} from '../../service/getData'
   import  '../../plugins/swiper.js'
   import  '../../style/swiper.css'
-  //import Swiper from '../../plugins/swiper.min';
-
   export default {
     data(){
       return {
@@ -70,6 +68,7 @@
       }
       //保存geohash 到vuex
       this.SAVE_GEOHASH(this.geohash);
+
       //获取位置信息
       let res = await msiteAdress(this.geohash);
       this.msietTitle = res.name;
@@ -90,10 +89,10 @@
         this.foodTypes = foodArr;
       }).then(() => {
         //初始化swiper
-  /*      new Swiper('.swiper-container', {
+       new Swiper('.swiper-container', {
           pagination: '.swiper-pagination',
           loop: true
-        });*/
+        });
       })
     },
     components: {

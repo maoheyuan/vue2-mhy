@@ -3,6 +3,10 @@ import {
 } from './env'
 
 export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
+  console.log(url);
+  console.log(data);
+  console.log(type);
+  console.log(method);
   type = type.toUpperCase();
   url = baseUrl + url;
 
