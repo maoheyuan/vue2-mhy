@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import App from '../App'
 import Home from "../page/home/home"
 import City from "../page/city/city"
+import Msite from "../page/msite/msite"
 Vue.use(Router)
 
 export default new Router({
@@ -25,6 +26,12 @@ export default new Router({
             path: '/city/:cityid',
             component: City
         },
+
+         {
+            path: '/msite',
+            component: Msite,
+            meta: { keepAlive: true },
+         },
       ]
     }
   ]
